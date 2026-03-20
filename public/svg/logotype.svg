@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 80" fill="none">
+  <!-- Diagonal accent line -->
+  <line x1="0" y1="78" x2="60" y2="2" stroke="#000" stroke-width="1.5"/>
+  <!-- AUTONOMOUS -->
+  <text x="72" y="38" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="0.12em" fill="#000">AUTONOMOUS</text>
+  <!-- PROJECTS -->
+  <text x="72" y="68" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="400" letter-spacing="0.12em" fill="#000">PROJECTS</text>
+</svg>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #000000;
+  --grey-darkest: #0A0A0A;
+  --grey-dark: #1A1A1A;
+  --grey-mid: #808080;
+  --grey-light: #C0C0C0;
+  --grey-wash: #F5F5F5;
+  --white: #FFFFFF;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-black font-body text-body;
+  }
+
+  ::selection {
+    @apply bg-black text-white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

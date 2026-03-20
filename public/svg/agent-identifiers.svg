@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 80" fill="none">
+  <!-- Agent geometric identifiers — one per agent -->
+
+  <!-- Zemm: Filled circle (the nucleus, human center) -->
+  <circle cx="40" cy="40" r="16" fill="#000"/>
+
+  <!-- Albion: Square (architecture, structure) -->
+  <rect x="104" y="24" width="32" height="32" fill="none" stroke="#000" stroke-width="2"/>
+
+  <!-- Urizen: Triangle pointing up (strategy, vision) -->
+  <polygon points="200,24 216,56 184,56" fill="none" stroke="#000" stroke-width="2"/>
+
+  <!-- Enitharmon: Diamond (design, faceted) -->
+  <polygon points="280,24 296,40 280,56 264,40" fill="none" stroke="#000" stroke-width="2"/>
+
+  <!-- Orc: Cross/plus (building, construction) -->
+  <line x1="360" y1="26" x2="360" y2="54" stroke="#000" stroke-width="2"/>
+  <line x1="346" y1="40" x2="374" y2="40" stroke="#000" stroke-width="2"/>
+
+  <!-- Urthona: Hexagon (infrastructure, systems) -->
+  <polygon points="440,26 454,33 454,47 440,54 426,47 426,33" fill="none" stroke="#000" stroke-width="2"/>
+
+  <!-- Vala: Horizontal line (words, flow) -->
+  <line x1="504" y1="40" x2="556" y2="40" stroke="#000" stroke-width="2"/>
+</svg>
