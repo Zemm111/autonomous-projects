@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk, Space_Mono } from 'next/font/google';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 
 const spaceGrotesk = Space_Grotesk({
@@ -18,6 +20,11 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: 'Autonomous Projects — Agentic Software Agency',
   description: 'We deploy coordinated AI agent swarms to design, build, and ship software — fast.',
+  openGraph: {
+    title: 'Autonomous Projects — Agentic Software Agency',
+    description: 'We deploy coordinated AI agent swarms to design, build, and ship software — fast.',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +34,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
-      <body>{children}</body>
+      <body className="antialiased">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
