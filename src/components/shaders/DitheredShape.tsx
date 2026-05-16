@@ -21,21 +21,14 @@ export default function DitheredShape({
 }: DitheredShapeProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
+  const frameRef = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
-
-    const updateSize = () => {
-      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    };
-    updateSize();
-    window.addEventListener('resize', updateSize);
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
@@ -96,13 +89,20 @@ export default function DitheredShape({
       }
     };
 
-    let frame = 0;
     const animate = () => {
-      const { width, height } = canvas.getBoundingClientRect();
+      const rect = canvas.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
       
+      // Set canvas resolution
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+
       ctx.clearRect(0, 0, width, height);
 
-      const time = frame * 0.01;
+      const time = frameRef.current * 0.01;
       const angle = mouseRef.current.x * Math.PI + time * 0.05;
       
       const centerX = width * position.x + Math.sin(time * 0.1) * 20;
@@ -138,7 +138,7 @@ export default function DitheredShape({
         }
       }
 
-      frame++;
+      frameRef.current++;
       requestAnimationFrame(animate);
     };
 
@@ -146,10 +146,9 @@ export default function DitheredShape({
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', updateSize);
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [shape, position.x, position.y, size, intensity]);
 
-  return <canvas ref={canvasRef} className={`pointer-events-none ${className}`} />;
+  return <canvas ref={canvasRef} className={`pointer-events-none ${className}`} style={{ width: '100%', height: '100%' }} />;
 }
