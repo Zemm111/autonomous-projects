@@ -2,6 +2,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 import MethodPhase from '@/components/MethodPhase';
 import Button from '@/components/Button';
 import Divider from '@/components/Divider';
+import MoireSquare from '@/components/shaders/MoireSquare';
 import { siteContent } from '@/lib/content';
 
 export default function Services() {
@@ -14,7 +15,12 @@ export default function Services() {
         </ScrollReveal>
 
         {/* Positioning */}
-        <section className="mb-24 md:mb-32">
+        <section className="mb-24 md:mb-32 relative">
+          {/* Moiré square graphic */}
+          <div className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/4 opacity-60 hidden lg:block">
+            <MoireSquare size={180} intensity={0.7} />
+          </div>
+          
           <div className="max-w-content ml-auto">
             <ScrollReveal>
               <p className="text-body-lg text-grey-dark leading-relaxed">
