@@ -2,11 +2,19 @@ import ScrollReveal from '@/components/ScrollReveal';
 import MethodPhase from '@/components/MethodPhase';
 import Button from '@/components/Button';
 import Divider from '@/components/Divider';
+import ShaderBackground from '@/components/shaders/ShaderBackground';
 import { siteContent } from '@/lib/content';
 
 export default function Services() {
   return (
-    <main className="min-h-screen pt-32 pb-24 px-6 md:px-12 lg:px-16">
+    <main className="min-h-screen pt-32 pb-24 px-6 md:px-12 lg:px-16 relative">
+      {/* Shader Zones */}
+      <ShaderBackground 
+        zones={[
+          { id: 'services-flow', type: 'flowfield', position: 'services-bottom', intensity: 0.7 },
+        ]}
+      />
+
       <div className="max-w-page mx-auto">
         {/* Page Title */}
         <ScrollReveal>

@@ -1,6 +1,7 @@
 import ScrollReveal from '@/components/ScrollReveal';
 import AgentCard from '@/components/AgentCard';
 import Divider from '@/components/Divider';
+import ShaderBackground from '@/components/shaders/ShaderBackground';
 import { siteContent } from '@/lib/content';
 
 // Agent shape assignments
@@ -15,7 +16,14 @@ const agentShapes = {
 
 export default function About() {
   return (
-    <main className="min-h-screen pt-32 pb-24 px-6 md:px-12 lg:px-16">
+    <main className="min-h-screen pt-32 pb-24 px-6 md:px-12 lg:px-16 relative">
+      {/* Shader Zones */}
+      <ShaderBackground 
+        zones={[
+          { id: 'about-flow', type: 'flowfield', position: 'about-left', intensity: 0.5 },
+        ]}
+      />
+
       <div className="max-w-page mx-auto">
         {/* Page Title */}
         <ScrollReveal>

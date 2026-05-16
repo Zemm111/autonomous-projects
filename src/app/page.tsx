@@ -1,16 +1,22 @@
 import ScrollReveal from '@/components/ScrollReveal';
 import Button from '@/components/Button';
 import Divider from '@/components/Divider';
-import ShaderHero from '@/components/ShaderHero';
+import ShaderBackground from '@/components/shaders/ShaderBackground';
 import GridOverlay from '@/components/GridOverlay';
 import { siteContent } from '@/lib/content';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      {/* Hero Section with Shader */}
+    <main className="min-h-screen relative">
+      {/* Shader Zones */}
+      <ShaderBackground 
+        zones={[
+          { id: 'hero-flow', type: 'flowfield', position: 'hero', intensity: 0.6 },
+        ]}
+      />
+
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <ShaderHero className="absolute inset-0 z-0" />
         <GridOverlay opacity={0.05} />
         
         <div className="relative z-10 px-6 md:px-12 lg:px-16 py-32 max-w-page mx-auto w-full">

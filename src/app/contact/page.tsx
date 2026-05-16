@@ -1,10 +1,18 @@
 import ScrollReveal from '@/components/ScrollReveal';
+import ShaderBackground from '@/components/shaders/ShaderBackground';
 import { siteContent } from '@/lib/content';
 
 export default function Contact() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-16">
-      <div className="max-w-content mx-auto text-center py-32">
+    <main className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-16 relative">
+      {/* Shader Zones */}
+      <ShaderBackground 
+        zones={[
+          { id: 'contact-flow', type: 'flowfield', position: 'contact-right', intensity: 0.4 },
+        ]}
+      />
+
+      <div className="max-w-content mx-auto text-center py-32 relative z-10">
         <ScrollReveal>
           <h1 className="font-display text-h1 mb-12">
             {siteContent.contact.intro}
