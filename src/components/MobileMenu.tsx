@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { siteContent } from '@/lib/content';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -118,10 +119,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               animate="open"
             >
               <a
-                href="mailto:zemnaph@gmail.com"
+                href={`mailto:${siteContent.contact.email}`}
                 className="text-caption uppercase tracking-wide text-grey-mid hover:text-white transition-colors duration-200"
               >
-                zemnaph@gmail.com
+                {siteContent.contact.email}
               </a>
             </motion.div>
           </div>

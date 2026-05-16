@@ -1,60 +1,50 @@
 // All site copy as structured data — single source of truth for content
-// Vala will refine these strings
 
 export const siteContent = {
   meta: {
-    title: 'Autonomous Projects — Agentic Software Agency',
-    description: 'We deploy coordinated AI agent swarms to design, build, and ship software — fast.',
+    title: 'Autonomous Projects — Agentic Software',
+    description: 'We build software with intelligence baked in. Product, design, and technical execution for AI-native applications.',
   },
 
   home: {
-    headline: 'We build software with agents.',
-    tagline: 'Autonomous Projects is an agentic software agency. We deploy coordinated AI agent swarms to design, build, and ship — fast.',
-    intro: "Software doesn't need to take months. Autonomous Projects pairs human product leadership with specialized AI agent teams to move from concept to deployed application in days, not quarters. We work at the speed of thought.",
+    headline: 'We build agentic software.',
+    tagline: 'Autonomous Projects builds AI-native applications. Product strategy, design, and full-stack execution for software with intelligence at its core.',
+    intro: "We build applications with intelligence as a core feature — software that reasons, adapts, and does work on behalf of users. Product definition, design systems, and full-stack implementation, handled end to end.",
     ctaPrimary: { label: 'Start a conversation →', href: '/contact/' },
-    ctaSecondary: { label: 'See how we work →', href: '/services/' },
+    ctaSecondary: { label: 'How we work →', href: '/services/' },
   },
 
   about: {
-    origin: "Autonomous Projects emerged from a simple observation: AI agents are extraordinary builders, but they need direction. Zemm — a product leader with years of experience shipping consumer AI applications — assembled a team not of contractors, but of agents. Each with a defined role. Each with a name. The result is a studio that operates more like a hive mind than a traditional agency.",
+    origin: "Autonomous Projects is a software studio building AI-native applications. The practice runs lean, moves fast, and ships software that feels considered.",
     philosophy: [
-      'Human-in-the-loop product direction, agent-powered execution',
-      'Speed through parallelism, not shortcuts',
-      'Every project is a fresh canvas — no templates, no boilerplate thinking',
+      'Product strategy comes first — technology serves the goal',
+      'Intelligence deserves good interfaces',
+      'Speed through clarity, not corner-cutting',
       'Ship, learn, iterate',
-    ],
-    team: [
-      { name: 'Zemm', role: 'Founder & Product Lead', bio: 'Human in the loop. Years of product leadership in AI, consumer apps, branding, and marketing.' },
-      { name: 'Albion', role: 'CTO', bio: 'The architect. Oversees technical direction and coordinates the agent swarm.' },
-      { name: 'Urizen', role: 'Product & Strategy', bio: 'Scopes projects, defines requirements, ensures the build serves the business goal.' },
-      { name: 'Enitharmon', role: 'Design & Visual Identity', bio: 'Creates the visual language — layouts, typography, SVG elements, the entire aesthetic.' },
-      { name: 'Orc', role: 'Builder', bio: 'Writes the code. Fast, relentless, ships working software.' },
-      { name: 'Urthona', role: 'Infrastructure & Systems', bio: 'Deployment, DevOps, the unsexy things that make everything actually work.' },
-      { name: 'Vala', role: 'Copy & Content', bio: 'Words. Tone. Voice. The final polish that makes everything feel human.' },
     ],
   },
 
   services: {
-    positioning: "Most agencies sell hours. We sell outcomes. Our agent swarm methodology means your project gets the equivalent of a full product team — product lead, designer, engineers, copywriter — working in compressed parallel, not sequential sprints.",
+    positioning: "We don't sell seats or sprints. You get product strategy, design systems, and technical implementation as a unified offering. Human product leadership, AI-assisted development. Faster cycles, no sacrifice on craft.",
     phases: [
-      { phase: 'Brief & Scope', description: 'Zemm + Urizen define the project. What are we building? For whom? What does done look like?', duration: '1–2 days' },
-      { phase: 'Design', description: 'Enitharmon produces visual direction, component design, layout structure.', duration: '1–2 days' },
-      { phase: 'Build', description: 'Orc and Urthona work in parallel — frontend, backend, infrastructure, deployment pipeline.', duration: '2–3 days' },
-      { phase: 'Copy & Polish', description: 'Vala refines all written content. Enitharmon does final visual QA.', duration: '1 day' },
-      { phase: 'Ship', description: 'Deployed, live, documented. Handoff to client.', duration: 'Same day' },
+      { phase: 'Product Definition', description: 'What are we building? For whom? What does success look like? Scope, requirements, acceptance criteria.', duration: '1–2 days' },
+      { phase: 'Design System', description: 'Visual direction, component library, interaction patterns. UI for software that does things autonomously.', duration: '1–2 days' },
+      { phase: 'Implementation', description: 'Full-stack build: frontend, backend, AI integrations, infrastructure. Tight iteration loops.', duration: '3–5 days' },
+      { phase: 'Polish & Ship', description: 'Copy refinement, edge case handling, deployment, documentation.', duration: '1–2 days' },
+      { phase: 'Handoff', description: 'Live, deployed, documented. You own it.', duration: 'Same day' },
     ],
     capabilities: [
-      'AI-enabled applications and interfaces',
-      'Agentic software prototypes',
-      'MVPs for startups experimenting with AI',
-      'Internal tools and integrations',
-      'Marketing sites and brand launches',
+      'AI-native applications (reasoning, decision-making, agent-to-agent communication)',
+      'Prototypes that demonstrate what is technically possible',
+      'Production MVPs for early-stage companies',
+      'Internal tools with agentic features',
+      'Marketing sites and brand systems',
     ],
   },
 
   contact: {
-    intro: "We're selective about what we build.",
-    cta: "If you have something interesting, we'd like to hear about it.",
-    email: 'zemnaph@gmail.com',
+    intro: "We're selective about projects.",
+    cta: "If you're building something interesting in the agentic software space, let's talk.",
+    email: 'hi@autonomousprojects.com',
   },
 };
