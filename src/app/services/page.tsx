@@ -30,7 +30,7 @@ export default function Services() {
         <section className="mb-24 md:mb-32">
           <ScrollReveal>
             <h2 className="font-display text-h2 uppercase tracking-tight mb-16">
-              The Swarm — Build Methodology
+              How We Work
             </h2>
           </ScrollReveal>
           
@@ -40,11 +40,34 @@ export default function Services() {
                 <MethodPhase
                   number={`0${i + 1}`}
                   title={phase.phase}
-                  duration={phase.duration}
                   description={phase.description}
                 />
               </ScrollReveal>
             ))}
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* What We Build */}
+        <section className="mb-24 md:mb-32">
+          <ScrollReveal>
+            <h2 className="font-display text-h2 uppercase tracking-tight mb-12">
+              {siteContent.services.capabilitiesTitle}
+            </h2>
+          </ScrollReveal>
+          
+          <div className="max-w-content">
+            <ul className="space-y-4">
+              {siteContent.services.capabilities.map((item, i) => (
+                <ScrollReveal key={i} delay={i * 0.05}>
+                  <li className="flex items-start text-body text-grey-dark">
+                    <span className="mr-4 mt-1.5 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0" />
+                    {item}
+                  </li>
+                </ScrollReveal>
+              ))}
+            </ul>
           </div>
         </section>
 

@@ -1,7 +1,7 @@
 interface MethodPhaseProps {
   number: string;
   title: string;
-  duration: string;
+  duration?: string;
   description: string;
 }
 
@@ -15,7 +15,7 @@ export default function MethodPhase({ number, title, duration, description }: Me
         <span className="font-display text-h2 text-grey-mid block mb-2">{number}</span>
         <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
           <h3 className="font-display text-h3 uppercase">{title}</h3>
-          <span className="text-caption uppercase text-grey-mid">{duration}</span>
+          {duration && <span className="text-caption uppercase text-grey-mid">{duration}</span>}
         </div>
       </div>
       <p className="text-body text-grey-dark max-w-2xl">{description}</p>

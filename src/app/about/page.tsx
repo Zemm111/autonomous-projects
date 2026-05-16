@@ -1,6 +1,17 @@
 import ScrollReveal from '@/components/ScrollReveal';
+import AgentCard from '@/components/AgentCard';
 import Divider from '@/components/Divider';
 import { siteContent } from '@/lib/content';
+
+// Agent shape assignments
+const agentShapes = {
+  'Albion': 'square' as const,
+  'Urizen': 'triangle' as const,
+  'Enitharmon': 'diamond' as const,
+  'Orc': 'cross' as const,
+  'Urthona': 'hexagon' as const,
+  'Vala': 'line' as const,
+};
 
 export default function About() {
   return (
@@ -25,7 +36,7 @@ export default function About() {
         <Divider />
 
         {/* Philosophy */}
-        <section className="mb-16">
+        <section className="mb-24 md:mb-32">
           <ScrollReveal>
             <h2 className="font-display text-h2 uppercase tracking-tight mb-12">
               Philosophy
@@ -43,6 +54,31 @@ export default function About() {
                 </ScrollReveal>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* Team */}
+        <section className="mb-16">
+          <ScrollReveal>
+            <h2 className="font-display text-h2 uppercase tracking-tight mb-12">
+              The Agent Team
+            </h2>
+          </ScrollReveal>
+          
+          <div className="max-w-3xl">
+            {siteContent.about.team.map((member, i) => (
+              <ScrollReveal key={member.name} delay={i * 0.05}>
+                <AgentCard
+                  name={member.name}
+                  role={member.role}
+                  description={member.bio}
+                  shape={agentShapes[member.name as keyof typeof agentShapes]}
+                  filled={false}
+                />
+              </ScrollReveal>
+            ))}
           </div>
         </section>
       </div>
