@@ -98,10 +98,12 @@ export default function MoireSquare({
   }, [size, intensity]);
 
   return (
-    <canvas 
-      ref={canvasRef} 
-      className={`pointer-events-none ${className}`}
-      style={{ width: size, height: size }}
-    />
+    <div style={{ width: size, height: size }} className={className}>
+      <canvas 
+        ref={canvasRef} 
+        className="pointer-events-none"
+        style={{ width: '100%', height: '100%', display: 'block' }}
+      />
+    </div>
   );
 }

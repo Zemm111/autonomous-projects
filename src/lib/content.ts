@@ -3,13 +3,13 @@
 export const siteContent = {
   meta: {
     title: 'Autonomous Projects - From Idea to Agentic Application',
-    description: 'We turn ideas into intelligent software - applications that reason, decide, and take action on behalf of users.',
+    description: 'We turn ideas into intelligent software - applications that reason, analyze, and take action on behalf of users.',
   },
 
   home: {
     headline: 'From idea to agentic application.',
-    tagline: 'Autonomous Projects helps you build intelligent software - applications that can reason, decide, and take action. We handle everything from product definition to launch.',
-    intro: "Agentic software is the next phase of ingenuity. It's software that understands context, makes decisions, and does work on behalf of users. Whether you have a clear vision or a rough idea, we turn concepts into working applications.",
+    tagline: 'Autonomous Projects helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.',
+    intro: "Agentic software is the next phase of ingenuity. It's software that understands context, analyzes information, and does work on behalf of users. Whether you have a clear vision or a rough idea, we turn concepts into working applications.",
     ctaPrimary: { label: 'Start a conversation →', href: '/contact/' },
     ctaSecondary: { label: 'How we work →', href: '/services/' },
   },
@@ -43,7 +43,7 @@ export const siteContent = {
     ],
     capabilitiesTitle: 'What We Build',
     capabilities: [
-      'Applications that make decisions',
+      'Applications that analyze data and surface insights',
       'Software that coordinates multiple agents with human feedback',
       'Agentic integrations into existing products',
       'Prototypes that explore technical feasibility',
