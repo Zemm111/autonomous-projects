@@ -1,7 +1,7 @@
 import ScrollReveal from '@/components/ScrollReveal';
 import Button from '@/components/Button';
 import Divider from '@/components/Divider';
-import ShaderHero from '@/components/ShaderHero';
+import DitheredShape from '@/components/shaders/DitheredShape';
 import GridOverlay from '@/components/GridOverlay';
 import { siteContent } from '@/lib/content';
 
@@ -10,7 +10,14 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero Section with Shader */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <ShaderHero className="absolute inset-0 z-0" />
+        {/* Dithered shape - offset to the right of title */}
+        <DitheredShape 
+          shape="blob"
+          position={{ x: 0.75, y: 0.35 }}
+          size={0.4}
+          intensity={0.7}
+          className="absolute inset-0 z-0"
+        />
         <GridOverlay opacity={0.05} />
         
         <div className="relative z-10 px-6 md:px-12 lg:px-16 py-32 max-w-page mx-auto w-full">

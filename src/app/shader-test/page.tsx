@@ -6,6 +6,12 @@ import MoireLines from '@/components/shaders/test/MoireLines';
 import OrganicNoise from '@/components/shaders/test/OrganicNoise';
 import DitheredGradient from '@/components/shaders/test/DitheredGradient';
 import FlowTrails from '@/components/shaders/test/FlowTrails';
+import DitheredShape from '@/components/shaders/DitheredShape';
+
+const DitheredCircle = () => <DitheredShape shape="circle" position={{ x: 0.5, y: 0.5 }} size={0.35} intensity={0.7} />;
+const DitheredEllipse = () => <DitheredShape shape="ellipse" position={{ x: 0.5, y: 0.5 }} size={0.35} intensity={0.7} />;
+const DitheredBlob = () => <DitheredShape shape="blob" position={{ x: 0.5, y: 0.5 }} size={0.35} intensity={0.7} />;
+const DitheredRectangle = () => <DitheredShape shape="rectangle" position={{ x: 0.5, y: 0.5 }} size={0.35} intensity={0.7} />;
 
 const shaders = [
   { 
@@ -27,10 +33,28 @@ const shaders = [
     component: OrganicNoise,
   },
   { 
-    id: 'dithered-gradient',
-    name: 'Dithered Gradient',
-    description: 'Halftone dots, mouse shifts angle',
-    component: DitheredGradient,
+    id: 'dithered-circle',
+    name: 'Dithered Circle',
+    description: 'Halftone circle, mouse shifts gradient angle',
+    component: DitheredCircle,
+  },
+  { 
+    id: 'dithered-ellipse',
+    name: 'Dithered Ellipse',
+    description: 'Halftone ellipse, rotates with mouse',
+    component: DitheredEllipse,
+  },
+  { 
+    id: 'dithered-blob',
+    name: 'Dithered Blob',
+    description: 'Organic halftone blob, wobbles gently',
+    component: DitheredBlob,
+  },
+  { 
+    id: 'dithered-rectangle',
+    name: 'Dithered Rectangle',
+    description: 'Halftone rectangle, rotates with mouse',
+    component: DitheredRectangle,
   },
   { 
     id: 'flow-trails',
