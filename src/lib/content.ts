@@ -1,50 +1,50 @@
-// All site copy as structured data — single source of truth for content
+// All site copy as structured data - single source of truth for content
 
 export const siteContent = {
   meta: {
-    title: 'Autonomous Projects — Agentic Software',
-    description: 'We build software with intelligence baked in. Product, design, and technical execution for AI-native applications.',
+    title: 'Autonomous Projects - From Idea to Agentic Application',
+    description: 'We turn ideas into intelligent software - applications that reason, decide, and take action on behalf of users.',
   },
 
   home: {
-    headline: 'We build agentic software.',
-    tagline: 'Autonomous Projects builds AI-native applications. Product strategy, design, and full-stack execution for software with intelligence at its core.',
-    intro: "We build applications with intelligence as a core feature — software that reasons, adapts, and does work on behalf of users. Product definition, design systems, and full-stack implementation, handled end to end.",
+    headline: 'From idea to agentic application.',
+    tagline: 'Autonomous Projects helps you build intelligent software - applications that can reason, decide, and take action. We handle everything from product definition to launch.',
+    intro: "Agentic software is the next phase of ingenuity. It's software that understands context, makes decisions, and does work on behalf of users. Whether you have a clear vision or a rough idea, we turn concepts into working applications.",
     ctaPrimary: { label: 'Start a conversation →', href: '/contact/' },
     ctaSecondary: { label: 'How we work →', href: '/services/' },
   },
 
   about: {
-    origin: "Autonomous Projects is a software studio building AI-native applications. The practice runs lean, moves fast, and ships software that feels considered.",
+    origin: "Autonomous Projects is built on a simple belief: the software that will define the next phase of ingenuity will be agentic. Applications that don't just respond to commands, but understand goals, reason through problems, and take action. We build that software using OpenClaw, our AI agent platform, and coordinate agent swarms for both development and as core product features. The result is software that ships fast and thinks deeply. We're building toward a future where every business has access to intelligent software that works alongside their team.",
     philosophy: [
-      'Product strategy comes first — technology serves the goal',
-      'Intelligence deserves good interfaces',
-      'Speed through clarity, not corner-cutting',
-      'Ship, learn, iterate',
+      'Intelligence is infrastructure - the next wave of applications will be built on reasoning, not just rules',
+      'Software that coordinates multiple AI agents to solve complex problems - unlocking product possibilities that were not feasible before',
+      'The best intelligent software feels simple - complexity hidden behind thoughtful interfaces',
+      'Ship, learn, iterate - intelligence improves with feedback',
     ],
   },
 
   services: {
-    positioning: "We don't sell seats or sprints. You get product strategy, design systems, and technical implementation as a unified offering. Human product leadership, AI-assisted development. Faster cycles, no sacrifice on craft.",
+    positioning: "We take you from idea to intelligent application. Whether you're exploring what's possible or ready to build, we provide product strategy, technical execution, and a clear path forward.",
     phases: [
-      { phase: 'Product Definition', description: 'What are we building? For whom? What does success look like? Scope, requirements, acceptance criteria.', duration: '1–2 days' },
-      { phase: 'Design System', description: 'Visual direction, component library, interaction patterns. UI for software that does things autonomously.', duration: '1–2 days' },
-      { phase: 'Implementation', description: 'Full-stack build: frontend, backend, AI integrations, infrastructure. Tight iteration loops.', duration: '3–5 days' },
-      { phase: 'Polish & Ship', description: 'Copy refinement, edge case handling, deployment, documentation.', duration: '1–2 days' },
-      { phase: 'Handoff', description: 'Live, deployed, documented. You own it.', duration: 'Same day' },
+      { phase: 'Discovery & Ideation', description: 'Free consultation. We talk through your idea, explore what intelligent features make sense, and map out a product vision. No commitment - just clarity.', duration: 'Free consultation' },
+      { phase: 'Product Definition', description: 'What are we building, and what does success look like? We define scope, features, user flows, and technical approach.', duration: '1-2 weeks' },
+      { phase: 'Rapid MVP', description: 'We build a working prototype with core intelligent features. Real software you can test with users and iterate on.', duration: '4-8 weeks' },
+      { phase: 'Testing & Refinement', description: 'User feedback, edge case handling, performance tuning. We refine the intelligence and the interface based on real use.', duration: '2-4 weeks' },
+      { phase: 'Expansion Path', description: 'Product roadmap for next features, scaling strategy, ongoing development options. You decide what is next.', duration: 'Ongoing' },
     ],
     capabilities: [
-      'AI-native applications (reasoning, decision-making, agent-to-agent communication)',
-      'Prototypes that demonstrate what is technically possible',
-      'Production MVPs for early-stage companies',
-      'Internal tools with agentic features',
-      'Marketing sites and brand systems',
+      'Applications that make decisions (approval workflows, content moderation, data analysis)',
+      'Software that coordinates multiple agents (research tools, multi-step automation)',
+      'Intelligent assistants for specific domains (legal, medical, creative, operations)',
+      'Agentic integrations into existing products',
+      'Prototypes that explore technical feasibility',
     ],
   },
 
   contact: {
-    intro: "We're selective about projects.",
-    cta: "If you're building something interesting in the agentic software space, let's talk.",
+    intro: "Exploring agentic applications? Have an idea you want to build?",
+    cta: "We'd love to hear about it. Start with a free consultation - no commitment, just a conversation about what's possible. We respond to every message personally, usually within a day.",
     email: 'hi@autonomousprojects.com',
   },
 };
