@@ -14,10 +14,10 @@ interface ShaderBackgroundProps {
 }
 
 const zoneStyles: Record<string, string> = {
-  'hero': 'absolute top-0 right-0 w-[60%] h-[80vh] -z-10',
-  'about-left': 'absolute left-0 top-[20%] w-[45%] h-[60vh] -z-10',
-  'services-bottom': 'absolute bottom-0 left-[10%] w-[50%] h-[50vh] -z-10',
-  'contact-right': 'absolute right-0 top-[30%] w-[40%] h-[40vh] -z-10',
+  'hero': 'absolute top-[-10%] right-[-10%] w-[75%] h-[110vh] -z-10',
+  'about-left': 'absolute left-[-15%] top-[10%] w-[65%] h-[80vh] -z-10',
+  'services-bottom': 'absolute bottom-[-20%] left-0 w-[70%] h-[70vh] -z-10',
+  'contact-right': 'absolute right-[-20%] top-[20%] w-[60%] h-[60vh] -z-10',
 };
 
 export default function ShaderBackground({ zones }: ShaderBackgroundProps) {

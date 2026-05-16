@@ -11,7 +11,7 @@ export default function Services() {
       {/* Shader Zones */}
       <ShaderBackground 
         zones={[
-          { id: 'services-flow', type: 'flowfield', position: 'services-bottom', intensity: 0.7 },
+          { id: 'services-moire', type: 'moire', position: 'services-bottom', intensity: 0.7 },
         ]}
       />
 

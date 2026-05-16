@@ -8,7 +8,7 @@ export default function Contact() {
       {/* Shader Zones */}
       <ShaderBackground 
         zones={[
-          { id: 'contact-flow', type: 'flowfield', position: 'contact-right', intensity: 0.4 },
+          { id: 'contact-moire', type: 'moire', position: 'contact-right', intensity: 0.5 },
         ]}
       />
 

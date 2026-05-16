@@ -11,7 +11,7 @@ export default function Home() {
       {/* Shader Zones */}
       <ShaderBackground 
         zones={[
-          { id: 'hero-flow', type: 'flowfield', position: 'hero', intensity: 0.6 },
+          { id: 'hero-moire', type: 'moire', position: 'hero', intensity: 0.8 },
         ]}
       />
 

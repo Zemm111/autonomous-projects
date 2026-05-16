@@ -76,8 +76,8 @@ export class FlowFieldShader {
     const mouseX = mouse.x * width;
     const mouseY = mouse.y * height;
 
-    // Fade previous frame (trail effect)
-    this.ctx.fillStyle = 'rgba(245, 245, 245, 0.08)';
+    // Fade previous frame (trail effect) - transparent background
+    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
     this.ctx.fillRect(0, 0, width, height);
 
     // Update and draw particles

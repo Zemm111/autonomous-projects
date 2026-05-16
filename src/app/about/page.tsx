@@ -20,7 +20,7 @@ export default function About() {
       {/* Shader Zones */}
       <ShaderBackground 
         zones={[
-          { id: 'about-flow', type: 'flowfield', position: 'about-left', intensity: 0.5 },
+          { id: 'about-moire', type: 'moire', position: 'about-left', intensity: 0.6 },
         ]}
       />
 
