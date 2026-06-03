@@ -17,9 +17,10 @@ export default function Header() {
         <nav className="max-w-page mx-auto px-6 md:px-12 lg:px-16 py-6 flex items-center justify-between">
           <Link 
             href="/" 
-            className="font-display text-caption uppercase tracking-wide hover:opacity-70 transition-opacity duration-150"
+            className="flex items-center gap-2 hover:opacity-70 transition-opacity duration-150"
           >
-            Autonomous Projects
+            <img src="/logo.jpg" alt="Agentic Applications" className="h-8 w-8" />
+            <span className="font-display text-caption uppercase tracking-wide">Agentic Applications</span>
           </Link>
           
           {/* Desktop Navigation */}

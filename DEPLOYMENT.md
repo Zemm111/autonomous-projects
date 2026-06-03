@@ -1,4 +1,4 @@
-# Deployment Guide — Autonomous Projects Website
+# Deployment Guide — Agentic Applications Website
 
 **Status:** Ready for deployment  
 **Build:** Complete  

@@ -2,20 +2,20 @@
 
 export const siteContent = {
   meta: {
-    title: 'Autonomous Projects - From Idea to Agentic Application',
+    title: 'Agentic Applications - From Idea to Intelligent Software',
     description: 'We turn ideas into intelligent software - applications that reason, analyze, and take action on behalf of users.',
   },
 
   home: {
     headline: 'From idea to agentic application.',
-    tagline: 'Autonomous Projects helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.',
+    tagline: 'Agentic Applications helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.',
     intro: "Agentic software is the next phase of ingenuity. It's software that understands context, analyzes information, and does work on behalf of users. Whether you have a clear vision or a rough idea, we turn concepts into working applications.",
     ctaPrimary: { label: 'Start a conversation →', href: '/contact/' },
     ctaSecondary: { label: 'How we work →', href: '/services/' },
   },
 
   about: {
-    origin: "Autonomous Projects is built on a simple belief: the software that will define the next phase of ingenuity will be agentic. Applications that don't just respond to commands, but understand goals, reason through problems, and take action. We build that software using OpenClaw, our AI agent platform, and coordinate agent swarms for both development and as core product features. The result is software that ships fast and thinks deeply. We're building toward a future where every business has access to intelligent software that works alongside their team.",
+    origin: "Agentic Applications is built on a simple belief: the software that will define the next phase of ingenuity will be agentic. Applications that don't just respond to commands, but understand goals, reason through problems, and take action. We build that software using OpenClaw, our AI agent platform, and coordinate agent swarms for both development and as core product features. The result is software that ships fast and thinks deeply. We're building toward a future where every business has access to intelligent software that works alongside their team.",
     philosophy: [
       'Intelligence is infrastructure - the next wave of applications will be built on reasoning, not just rules',
       'Software that coordinates multiple AI agents to solve complex problems - unlocking product possibilities that were not feasible before',
@@ -54,6 +54,6 @@ export const siteContent = {
   contact: {
     intro: "Exploring agentic applications? Have an idea you want to build?",
     cta: "We'd love to hear about it. Start with a free consultation - no commitment, just a conversation about what's possible. We respond to every message personally, usually within a day.",
-    email: 'hi@autonomousprojects.com',
+    email: 'zemnaph@gmail.com',
   },
 };
