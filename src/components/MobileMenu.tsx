@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { siteContent } from '@/lib/content';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -109,22 +108,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 </motion.div>
               ))}
             </nav>
-
-            {/* Footer */}
-            <motion.div
-              className="px-6 py-8 text-center"
-              custom={3}
-              variants={linkVariants}
-              initial="closed"
-              animate="open"
-            >
-              <a
-                href={`mailto:${siteContent.contact.email}`}
-                className="text-caption uppercase tracking-wide text-grey-mid hover:text-white transition-colors duration-200"
-              >
-                {siteContent.contact.email}
-              </a>
-            </motion.div>
           </div>
         </motion.div>
       )}
