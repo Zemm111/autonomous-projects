@@ -28,6 +28,15 @@ Lower East Side gallery vibes — spare, confident, intentional. Pure monochrome
 
 ## 🚀 Local Development
 
+### Environment Setup
+
+The contact form uses OpenClaw CLI for Telegram notifications.
+
+**Prerequisites:**
+- OpenClaw must be installed and configured on the system
+- Telegram channel must be set up in OpenClaw config
+- No additional environment variables required (uses system OpenClaw config)
+
 ### Install Dependencies
 ```bash
 npm install
@@ -109,7 +118,44 @@ site/
 
 ### Contact (`/contact/`)
 - Minimal, centered design
-- Email link
+- Contact form with Telegram notifications
+- Security: Rate limiting, honeypot, origin validation
+- Server-side validation and input sanitization
+
+---
+
+## 📬 Contact Form Features
+
+The contact form includes comprehensive security measures:
+
+### Security Features
+- **Rate Limiting:** Maximum 5 submissions per IP address per hour
+- **Origin Validation:** Only accepts requests from agenticapplications.com and localhost (dev)
+- **Honeypot Field:** Hidden field to detect bot submissions
+- **Server-side Validation:** All inputs validated and sanitized
+- **Input Sanitization:** HTML tags removed, length limits enforced
+
+### Form Fields
+- **Inquiry** (required) — Textarea for message
+- **Name** (required) — Text input
+- **Email** (required) — Email validation
+- **Company** (optional) — Text input
+
+### Telegram Notifications
+On successful submission, a formatted notification is sent via OpenClaw gateway:
+```
+🔔 New Contact Inquiry
+
+📝 Inquiry:
+[user's message]
+
+👤 Name: [name]
+📧 Email: [email]
+🏢 Company: [company or "Not provided"]
+```
+
+### API Endpoint
+`POST /api/contact` — Handles form submissions with comprehensive validation and security
 
 ---
 
@@ -185,8 +231,8 @@ SVG files are in `public/svg/`. They're referenced in components via `/svg/filen
 
 - [ ] Add Google Analytics (Zemm to configure)
 - [ ] Set up custom domain
-- [ ] Consider adding a simple contact form (requires backend)
 - [ ] Optimize shader performance for low-end devices
+- [x] Contact form with Telegram notifications (COMPLETE)
 
 ---
 
