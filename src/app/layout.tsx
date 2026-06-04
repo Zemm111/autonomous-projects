@@ -18,12 +18,17 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Autonomous Projects — Agentic Software Agency',
-  description: 'We deploy coordinated AI agent swarms to design, build, and ship software — fast.',
+  title: 'Agentic Applications — Intelligent Software Agency',
+  description: 'We build intelligent software - applications that reason, analyze, and take action. From idea to agentic application.',
+  icons: {
+    icon: '/logo.jpg',
+    apple: '/logo.jpg',
+  },
   openGraph: {
-    title: 'Autonomous Projects — Agentic Software Agency',
-    description: 'We deploy coordinated AI agent swarms to design, build, and ship software — fast.',
+    title: 'Agentic Applications — Intelligent Software Agency',
+    description: 'We build intelligent software - applications that reason, analyze, and take action. From idea to agentic application.',
     type: 'website',
+    images: ['/logo.jpg'],
   },
 };
 
