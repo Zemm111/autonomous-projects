@@ -87,12 +87,29 @@ ${data.inquiry}
 📧 Email: ${data.email}
 🏢 Company: ${data.company || 'Not provided'}`;
 
-    // Use OpenClaw CLI to send message via Telegram
-    const { exec } = require('child_process');
-    const { promisify } = require('util');
-    const execAsync = promisify(exec);
+    // Use OpenClaw Gateway HTTP API to send Telegram message
+    const gatewayUrl = process.env.OPENCLAW_GATEWAY_URL || 'http://localhost:4848';
+    const gatewayToken = process.env.OPENCLAW_GATEWAY_TOKEN;
 
-    await execAsync(`openclaw message send --channel telegram --message ${JSON.stringify(message)}`);
+    const response = await fetch(`${gatewayUrl}/api/message`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(gatewayToken && { 'Authorization': `Bearer ${gatewayToken}` }),
+      },
+      body: JSON.stringify({
+        action: 'send',
+        channel: 'telegram',
+        to: 'telegram:1295040743', // Zemm's Telegram ID
+        message: message,
+      }),
+    });
+
+    if (!response.ok) {
+      console.error('Gateway response not OK:', response.status, await response.text());
+      return false;
+    }
+
     return true;
   } catch (error) {
     console.error('Error sending Telegram notification:', error);
