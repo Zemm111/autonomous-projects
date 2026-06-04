@@ -124,8 +124,14 @@ export async function POST(request: NextRequest) {
       'https://www.agenticapplications.com',
       'http://localhost:3000',
     ];
+    
+    // Also allow any Vercel preview/production domains
+    const isVercelDomain = origin && (
+      origin.endsWith('.vercel.app') || 
+      origin.endsWith('.vercel.com')
+    );
 
-    if (!origin || !allowedOrigins.includes(origin)) {
+    if (!origin || (!allowedOrigins.includes(origin) && !isVercelDomain)) {
       return NextResponse.json(
         { error: 'Invalid origin' },
         { status: 403 }

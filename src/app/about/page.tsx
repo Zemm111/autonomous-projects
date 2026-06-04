@@ -5,6 +5,7 @@ import { siteContent } from '@/lib/content';
 
 // Agent shape assignments
 const agentShapes = {
+  'Human In The Loop': 'circle' as const,
   'Albion': 'square' as const,
   'Urizen': 'triangle' as const,
   'Enitharmon': 'diamond' as const,
@@ -59,36 +60,29 @@ export default function About() {
 
         <Divider />
 
-        {/* Human In The Loop */}
-        <section className="mb-24 md:mb-32">
-          <ScrollReveal>
-            <h2 className="font-display text-h2 uppercase tracking-tight mb-12 text-center">
-              Human In The Loop
-            </h2>
-          </ScrollReveal>
-          
-          <div className="max-w-content mx-auto">
-            <ScrollReveal>
-              <p className="text-body-lg text-grey-dark leading-relaxed text-center">
-                Every Agentic Applications project has a <span className="text-blue-brand">human product manager</span>. The Agentic Applications Lead will work directly with you and the will supervise all development. Our small team includes experience in fast moving startups and large organizations, with 30 cumulative years of experience in product management, application design, user experience, engineering and go-to-market tactics. We believe <span className="text-blue-brand">human-agent pairs</span> are how quality apps get built.
-              </p>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        <Divider />
-
         {/* Team */}
         <section className="mb-16">
           <ScrollReveal>
             <h2 className="font-display text-h2 uppercase tracking-tight mb-12">
-              The Agent Team
+              The Team
             </h2>
           </ScrollReveal>
           
           <div className="max-w-3xl">
+            {/* Human In The Loop - First entry */}
+            <ScrollReveal delay={0}>
+              <AgentCard
+                name="Human In The Loop"
+                role="Product Leadership"
+                description="Every Agentic Applications project has a human product manager. The Agentic Applications Lead will work directly with you and supervise all development. Our small team includes experience in fast moving startups and large organizations, with 30 cumulative years of experience in product management, application design, user experience, engineering and go-to-market tactics. We believe human-agent pairs are how quality apps get built."
+                shape="circle"
+                filled={false}
+              />
+            </ScrollReveal>
+            
+            {/* Agent Team */}
             {siteContent.about.team.map((member, i) => (
-              <ScrollReveal key={member.name} delay={i * 0.05}>
+              <ScrollReveal key={member.name} delay={(i + 1) * 0.05}>
                 <AgentCard
                   name={member.name}
                   role={member.role}
