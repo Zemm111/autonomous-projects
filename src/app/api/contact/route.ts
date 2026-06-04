@@ -119,9 +119,11 @@ export async function POST(request: NextRequest) {
   try {
     // 1. Origin validation
     const origin = request.headers.get('origin');
+    const appDomain = process.env.APP_DOMAIN || 'agentic-applications.dev';
+    
     const allowedOrigins = [
-      'https://agenticapplications.com',
-      'https://www.agenticapplications.com',
+      `https://${appDomain}`,
+      `https://www.${appDomain}`,
       'http://localhost:3000',
     ];
     
@@ -132,6 +134,7 @@ export async function POST(request: NextRequest) {
     );
 
     if (!origin || (!allowedOrigins.includes(origin) && !isVercelDomain)) {
+      console.error('Origin validation failed:', { origin, allowedOrigins });
       return NextResponse.json(
         { error: 'Invalid origin' },
         { status: 403 }
