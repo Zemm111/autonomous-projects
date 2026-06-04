@@ -117,31 +117,7 @@ async function sendEmailNotification(data: {
 
 export async function POST(request: NextRequest) {
   try {
-    // 1. Origin validation
-    const origin = request.headers.get('origin');
-    const appDomain = process.env.APP_DOMAIN || 'agentic-applications.dev';
-    
-    const allowedOrigins = [
-      `https://${appDomain}`,
-      `https://www.${appDomain}`,
-      'http://localhost:3000',
-    ];
-    
-    // Also allow any Vercel preview/production domains
-    const isVercelDomain = origin && (
-      origin.endsWith('.vercel.app') || 
-      origin.endsWith('.vercel.com')
-    );
-
-    if (!origin || (!allowedOrigins.includes(origin) && !isVercelDomain)) {
-      console.error('Origin validation failed:', { origin, allowedOrigins });
-      return NextResponse.json(
-        { error: 'Invalid origin' },
-        { status: 403 }
-      );
-    }
-
-    // 2. Rate limiting
+    // 1. Rate limiting (removed origin check - we have rate limiting + honeypot protection)
     const clientIp = getClientIp(request);
     const rateLimit = checkRateLimit(clientIp);
 
@@ -158,10 +134,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 3. Parse and validate body
+    // 2. Parse and validate body
     const body: ContactFormData = await request.json();
 
-    // 4. Honeypot check
+    // 3. Honeypot check
     if (body.honeypot) {
       // Bot detected, silently reject
       return NextResponse.json(
@@ -170,7 +146,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 5. Server-side validation
+    // 4. Server-side validation
     const errors: string[] = [];
 
     if (!body.name || body.name.trim().length === 0) {
@@ -192,7 +168,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 6. Sanitize inputs
+    // 5. Sanitize inputs
     const sanitizedData = {
       name: sanitizeInput(body.name),
       email: sanitizeInput(body.email),
@@ -200,7 +176,7 @@ export async function POST(request: NextRequest) {
       company: body.company ? sanitizeInput(body.company) : undefined,
     };
 
-    // 7. Send email notification
+    // 6. Send email notification
     const notificationSent = await sendEmailNotification(sanitizedData);
 
     if (!notificationSent) {
@@ -208,7 +184,7 @@ export async function POST(request: NextRequest) {
       // Don't fail the request if notification fails - log it instead
     }
 
-    // 8. Success response
+    // 7. Success response
     return NextResponse.json(
       { 
         success: true, 
