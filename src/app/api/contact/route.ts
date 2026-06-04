@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
 // In-memory rate limiting store
 // In production, use Redis or similar
@@ -71,48 +72,45 @@ function checkRateLimit(ip: string): { allowed: boolean; remaining: number } {
   return { allowed: true, remaining: maxRequests - record.count };
 }
 
-async function sendTelegramNotification(data: {
+async function sendEmailNotification(data: {
   inquiry: string;
   name: string;
   email: string;
   company?: string;
 }): Promise<boolean> {
   try {
-    const message = `🔔 New Contact Inquiry
+    // Initialize Resend with API key (only when function is called)
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error('RESEND_API_KEY not configured');
+      return false;
+    }
 
-📝 Inquiry:
-${data.inquiry}
+    const resend = new Resend(apiKey);
 
-👤 Name: ${data.name}
-📧 Email: ${data.email}
-🏢 Company: ${data.company || 'Not provided'}`;
+    const htmlBody = `
+      <h2>🔔 New Contact Inquiry</h2>
+      <p><strong>📝 Inquiry:</strong><br>${data.inquiry.replace(/\n/g, '<br>')}</p>
+      <p><strong>👤 Name:</strong> ${data.name}</p>
+      <p><strong>📧 Email:</strong> ${data.email}</p>
+      <p><strong>🏢 Company:</strong> ${data.company || 'Not provided'}</p>
+    `;
 
-    // Use OpenClaw Gateway HTTP API to send Telegram message
-    const gatewayUrl = process.env.OPENCLAW_GATEWAY_URL || 'http://localhost:4848';
-    const gatewayToken = process.env.OPENCLAW_GATEWAY_TOKEN;
-
-    const response = await fetch(`${gatewayUrl}/api/message`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...(gatewayToken && { 'Authorization': `Bearer ${gatewayToken}` }),
-      },
-      body: JSON.stringify({
-        action: 'send',
-        channel: 'telegram',
-        to: 'telegram:1295040743', // Zemm's Telegram ID
-        message: message,
-      }),
+    const response = await resend.emails.send({
+      from: 'Agentic Apps Contact <onboarding@resend.dev>',
+      to: ['zemnaph@gmail.com'],
+      subject: `[Agentic Apps] New Contact: ${data.name}`,
+      html: htmlBody,
     });
 
-    if (!response.ok) {
-      console.error('Gateway response not OK:', response.status, await response.text());
+    if (response.error) {
+      console.error('Resend error:', response.error);
       return false;
     }
 
     return true;
   } catch (error) {
-    console.error('Error sending Telegram notification:', error);
+    console.error('Error sending email notification:', error);
     return false;
   }
 }
@@ -193,8 +191,8 @@ export async function POST(request: NextRequest) {
       company: body.company ? sanitizeInput(body.company) : undefined,
     };
 
-    // 7. Send Telegram notification
-    const notificationSent = await sendTelegramNotification(sanitizedData);
+    // 7. Send email notification
+    const notificationSent = await sendEmailNotification(sanitizedData);
 
     if (!notificationSent) {
       console.error('Failed to send notification, but accepting submission');

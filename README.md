@@ -30,12 +30,17 @@ Lower East Side gallery vibes — spare, confident, intentional. Pure monochrome
 
 ### Environment Setup
 
-The contact form uses OpenClaw CLI for Telegram notifications.
+The contact form uses Resend for email notifications.
 
 **Prerequisites:**
-- OpenClaw must be installed and configured on the system
-- Telegram channel must be set up in OpenClaw config
-- No additional environment variables required (uses system OpenClaw config)
+- Resend account (get API key from [resend.com](https://resend.com))
+- Create `.env.local` file in the project root:
+
+```bash
+RESEND_API_KEY=re_xxx  # Get from resend.com dashboard
+```
+
+**Note:** Without the Resend API key, the contact form will accept submissions but email notifications will fail silently (submission still succeeds for better UX).
 
 ### Install Dependencies
 ```bash
@@ -141,18 +146,17 @@ The contact form includes comprehensive security measures:
 - **Email** (required) — Email validation
 - **Company** (optional) — Text input
 
-### Telegram Notifications
-On successful submission, a formatted notification is sent via OpenClaw gateway:
+### Email Notifications
+On successful submission, a formatted email notification is sent to `zemnaph@gmail.com` via Resend:
+```html
+<h2>🔔 New Contact Inquiry</h2>
+<p><strong>📝 Inquiry:</strong><br>[user's message]</p>
+<p><strong>👤 Name:</strong> [name]</p>
+<p><strong>📧 Email:</strong> [email]</p>
+<p><strong>🏢 Company:</strong> [company or "Not provided"]</p>
 ```
-🔔 New Contact Inquiry
 
-📝 Inquiry:
-[user's message]
-
-👤 Name: [name]
-📧 Email: [email]
-🏢 Company: [company or "Not provided"]
-```
+Subject line: `[Agentic Apps] New Contact: [name]`
 
 ### API Endpoint
 `POST /api/contact` — Handles form submissions with comprehensive validation and security
@@ -232,7 +236,7 @@ SVG files are in `public/svg/`. They're referenced in components via `/svg/filen
 - [ ] Add Google Analytics (Zemm to configure)
 - [ ] Set up custom domain
 - [ ] Optimize shader performance for low-end devices
-- [x] Contact form with Telegram notifications (COMPLETE)
+- [x] Contact form with email notifications via Resend (COMPLETE)
 
 ---
 
