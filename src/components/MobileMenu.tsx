@@ -55,7 +55,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-100 bg-black"
+          className="fixed inset-0 z-[9999] bg-black isolate"
           variants={menuVariants}
           initial="closed"
           animate="open"
