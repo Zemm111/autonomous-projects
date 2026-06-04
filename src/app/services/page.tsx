@@ -24,7 +24,7 @@ export default function Services() {
           <div className="max-w-content ml-auto">
             <ScrollReveal>
               <p className="text-body-lg text-grey-dark leading-relaxed">
-                {siteContent.services.positioning}
+                We take you from idea to <span className="text-blue-brand">intelligent application</span>. Whether you're exploring what's possible or ready to build, we provide product strategy, technical execution, and a clear path forward.
               </p>
             </ScrollReveal>
           </div>

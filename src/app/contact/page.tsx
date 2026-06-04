@@ -7,13 +7,13 @@ export default function Contact() {
       <div className="max-w-content mx-auto text-center py-32">
         <ScrollReveal>
           <h1 className="font-display text-h1 mb-12">
-            {siteContent.contact.intro}
+            Exploring <span className="text-blue-brand">agentic applications</span>? Have an idea you want to build?
           </h1>
         </ScrollReveal>
         
         <ScrollReveal delay={0.1}>
           <p className="text-body-lg text-grey-dark mb-12 max-w-lg mx-auto">
-            {siteContent.contact.cta}
+            We'd love to hear about it. Start with a free consultation on your idea, application or <span className="text-blue-brand">agentic integration</span>. We respond to every message personally (from a human), usually within a day.
           </p>
         </ScrollReveal>
         

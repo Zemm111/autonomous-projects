@@ -23,13 +23,13 @@ export default function Home() {
         <div className="relative z-10 px-6 md:px-12 lg:px-16 py-32 max-w-page mx-auto w-full">
           <ScrollReveal>
             <h1 className="font-display text-display mb-8 max-w-4xl">
-              {siteContent.home.headline}
+              From idea to <span className="text-blue-brand">agentic application</span>.
             </h1>
           </ScrollReveal>
           
           <ScrollReveal delay={0.1}>
             <p className="text-body-lg text-grey-dark mb-8 max-w-2xl">
-              {siteContent.home.tagline}
+              <span className="text-blue-brand">Agentic Applications</span> helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.
             </p>
           </ScrollReveal>
           
@@ -53,7 +53,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="space-y-6">
                 <p className="text-body-lg text-grey-dark leading-relaxed">
-                  {siteContent.home.intro}
+                  <span className="text-blue-brand">Agentic software</span> is the next phase of ingenuity. It's software that understands context, analyzes information, and does work on behalf of users. Whether you have a clear vision or a rough idea, we turn concepts into working applications.
                 </p>
               </div>
             </ScrollReveal>

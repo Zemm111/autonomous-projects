@@ -27,7 +27,7 @@ export default function About() {
           <div className="max-w-content ml-auto">
             <ScrollReveal>
               <p className="text-body-lg text-grey-dark leading-relaxed">
-                {siteContent.about.origin}
+                Agentic Applications is built on a simple belief: the software that will define the next phase of <span className="text-blue-brand">digital interactivity</span> will be agentic. These are applications that understand goals, reason through problems and take action. We use state of the art orchestration frameworks, like OpenClaw, to coordinate swarms for development and for core product features. The result is software that ships fast and thinks deeply. We're building toward a future where agents are an implicit facet of product design, go-to-market methodology, user retention and business logic.
               </p>
             </ScrollReveal>
           </div>

@@ -15,7 +15,7 @@ export const siteContent = {
   },
 
   about: {
-    origin: "Agentic Applications is built on a simple belief: the software that will define the next phase of ingenuity will be agentic. Applications that don't just respond to commands, but understand goals, reason through problems, and take action. We build that software using OpenClaw, our AI agent platform, and coordinate agent swarms for both development and as core product features. The result is software that ships fast and thinks deeply. We're building toward a future where every business has access to intelligent software that works alongside their team.",
+    origin: "Agentic Applications is built on a simple belief: the software that will define the next phase of digital interactivity will be agentic. These are applications that understand goals, reason through problems and take action. We use state of the art orchestration frameworks, like OpenClaw, to coordinate swarms for development and for core product features. The result is software that ships fast and thinks deeply. We're building toward a future where agents are an implicit facet of product design, go-to-market methodology, user retention and business logic.",
     philosophy: [
       'Intelligence is infrastructure - the next wave of applications will be built on reasoning, not just rules',
       'Software that coordinates multiple AI agents to solve complex problems - unlocking product possibilities that were not feasible before',
@@ -53,7 +53,7 @@ export const siteContent = {
 
   contact: {
     intro: "Exploring agentic applications? Have an idea you want to build?",
-    cta: "We'd love to hear about it. Start with a free consultation - no commitment, just a conversation about what's possible. We respond to every message personally, usually within a day.",
+    cta: "We'd love to hear about it. Start with a free consultation on your idea, application or agentic integration. We respond to every message personally (from a human), usually within a day.",
     email: 'zemnaph@gmail.com',
   },
 };
