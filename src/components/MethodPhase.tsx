@@ -1,8 +1,10 @@
+import { ReactNode } from 'react';
+
 interface MethodPhaseProps {
   number: string;
   title: string;
   duration?: string;
-  description: string;
+  description: string | ReactNode;
 }
 
 export default function MethodPhase({ number, title, duration, description }: MethodPhaseProps) {

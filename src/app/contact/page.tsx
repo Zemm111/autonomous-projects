@@ -13,7 +13,7 @@ export default function Contact() {
         
         <ScrollReveal delay={0.1}>
           <p className="text-body-lg text-grey-dark mb-16 max-w-lg mx-auto text-center">
-            We'd love to hear about it. Start with a free consultation on your idea, application or <span className="text-blue-brand">agentic integration</span>. We respond to every message personally (from a human), usually within a day.
+            We'd love to hear about it. Start with a free consultation on your <span className="text-blue-brand">idea, application or agentic integration</span>. We respond to every message personally (from a human), usually within a day.
           </p>
         </ScrollReveal>
         

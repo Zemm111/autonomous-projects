@@ -24,7 +24,7 @@ export default function Services() {
           <div className="max-w-content ml-auto">
             <ScrollReveal>
               <p className="text-body-lg text-grey-dark leading-relaxed">
-                We take you from idea to <span className="text-blue-brand">intelligent application</span>. Whether you're exploring what's possible or ready to build, we provide product strategy, technical execution, and a clear path forward.
+                We take you from <span className="text-blue-brand">idea to intelligent application</span>. Whether you're exploring what's possible or ready to build, we provide product strategy, technical execution, and a clear path forward.
               </p>
             </ScrollReveal>
           </div>
@@ -41,15 +41,52 @@ export default function Services() {
           </ScrollReveal>
           
           <div className="max-w-4xl">
-            {siteContent.services.phases.map((phase, i) => (
-              <ScrollReveal key={i} delay={i * 0.05}>
-                <MethodPhase
-                  number={`0${i + 1}`}
-                  title={phase.phase}
-                  description={phase.description}
-                />
-              </ScrollReveal>
-            ))}
+            {siteContent.services.phases.map((phase, i) => {
+              // Add blue highlighting to specific phrases
+              let description: React.ReactNode = phase.description;
+              
+              if (i === 0) {
+                description = phase.description.replace(
+                  'Free consultation',
+                  '<span class="text-blue-brand">Free consultation</span>'
+                );
+                description = <span dangerouslySetInnerHTML={{ __html: description as string }} />;
+              } else if (i === 1) {
+                description = phase.description.replace(
+                  'define scope',
+                  '<span class="text-blue-brand">define scope</span>'
+                );
+                description = <span dangerouslySetInnerHTML={{ __html: description as string }} />;
+              } else if (i === 2) {
+                description = phase.description.replace(
+                  'working prototype',
+                  '<span class="text-blue-brand">working prototype</span>'
+                );
+                description = <span dangerouslySetInnerHTML={{ __html: description as string }} />;
+              } else if (i === 3) {
+                description = phase.description.replace(
+                  'real use',
+                  '<span class="text-blue-brand">real use</span>'
+                );
+                description = <span dangerouslySetInnerHTML={{ __html: description as string }} />;
+              } else if (i === 4) {
+                description = phase.description.replace(
+                  'You decide what is next',
+                  '<span class="text-blue-brand">You decide what is next</span>'
+                );
+                description = <span dangerouslySetInnerHTML={{ __html: description as string }} />;
+              }
+              
+              return (
+                <ScrollReveal key={i} delay={i * 0.05}>
+                  <MethodPhase
+                    number={`0${i + 1}`}
+                    title={phase.phase}
+                    description={description}
+                  />
+                </ScrollReveal>
+              );
+            })}
           </div>
         </section>
 
