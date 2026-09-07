@@ -1,4 +1,4 @@
-# Deployment Guide — Agentic Applications Website
+# Deployment Guide — Aegean Applications Website
 
 **Status:** Ready for deployment  
 **Build:** Complete  

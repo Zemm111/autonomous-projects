@@ -28,7 +28,7 @@ export default function About() {
           <div className="max-w-content ml-auto">
             <ScrollReveal>
               <p className="text-body-lg text-grey-dark leading-relaxed">
-                Agentic Applications is built on a simple belief: the software that will define the next phase of <span className="text-blue-brand">digital interactivity will be agentic</span>. These are applications that understand goals, reason through problems and take action. We use state of the art orchestration frameworks, like OpenClaw, to coordinate swarms for development and for core product features. The result is software that ships fast and thinks deeply. We're building toward a future where agents are an implicit facet of product design, go-to-market methodology, user retention and business logic.
+                Aegean Applications is built on a simple belief: the software that will define the next phase of <span className="text-blue-brand">digital interactivity will be agentic</span>. These are applications that understand goals, reason through problems and take action. We use state of the art orchestration frameworks, like OpenClaw, to coordinate swarms for development and for core product features. The result is software that ships fast and thinks deeply. We're building toward a future where agents are an implicit facet of product design, go-to-market methodology, user retention and business logic.
               </p>
             </ScrollReveal>
           </div>
@@ -74,7 +74,7 @@ export default function About() {
               <AgentCard
                 name="Human In The Loop"
                 role="Product Leadership"
-                description="Every Agentic Applications project has a human product manager. The Agentic Applications Lead will work directly with you and supervise all development. Our small team includes experience in fast moving startups and large organizations, with 30 cumulative years of experience in product management, application design, user experience, engineering and go-to-market tactics. We believe human-agent pairs are how quality apps get built."
+                description="Every Aegean Applications project has a human product manager. The Aegean Applications Lead will work directly with you and supervise all development. Our small team includes experience in fast moving startups and large organizations, with 30 cumulative years of experience in product management, application design, user experience, engineering and go-to-market tactics. We believe human-agent pairs are how quality apps get built."
                 shape="circle"
                 filled={false}
               />

@@ -2,7 +2,7 @@
 
 ## ✅ Completed
 
-Built and tested a complete Telegram-notification contact form for the Agentic Applications agency website.
+Built and tested a complete Telegram-notification contact form for the Aegean Applications (formerly Agentic Applications) agency website.
 
 **Git commit:** `f5b9e80` - "feat: Add contact form with Telegram notifications"
 

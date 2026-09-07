@@ -1,14 +1,15 @@
-# Agentic Applications — Agency Website
+# Aegean Applications — Agency Website
 
 **Status:** ✅ COMPLETE  
 **Built by:** The Agent Swarm (Orc + Enitharmon + Urthona + Vala)  
-**Date:** March 20, 2026
+**Date:** March 20, 2026  
+**Rebrand:** September 7, 2026 (Agentic → Aegean Applications)
 
 ---
 
 ## 📋 Project Overview
 
-This is a statically-exported Next.js 14 website for Agentic Applications, an agentic software building agency. The site showcases the agency's unique methodology of using coordinated AI agent swarms to build software rapidly.
+This is a statically-exported Next.js 14 website for Aegean Applications (formerly Agentic Applications), an agentic software building agency. The site showcases the agency's unique methodology of using coordinated AI agent swarms to build software rapidly.
 
 ### Design Aesthetic
 Lower East Side gallery vibes — spare, confident, intentional. Pure monochrome palette with custom SVG elements and a mouse-reactive WebGL shader hero.

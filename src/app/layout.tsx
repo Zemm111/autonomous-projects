@@ -18,14 +18,14 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Agentic Applications — Intelligent Software Agency',
+  title: 'Aegean Applications (Agentic Applications) — Intelligent Software Agency',
   description: 'We build intelligent software - applications that reason, analyze, and take action. From idea to agentic application.',
   icons: {
     icon: '/logo.jpg',
     apple: '/logo.jpg',
   },
   openGraph: {
-    title: 'Agentic Applications — Intelligent Software Agency',
+    title: 'Aegean Applications (Agentic Applications) — Intelligent Software Agency',
     description: 'We build intelligent software - applications that reason, analyze, and take action. From idea to agentic application.',
     type: 'website',
     images: ['/logo.jpg'],

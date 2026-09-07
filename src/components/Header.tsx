@@ -20,8 +20,8 @@ export default function Header() {
             className="flex items-center gap-3 hover:opacity-70 transition-opacity duration-150"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <img src="/logo.jpg" alt="Agentic Applications" className="h-12 w-12" />
-            <span className="font-display text-caption uppercase tracking-wide">Agentic Applications</span>
+            <img src="/logo.jpg" alt="Aegean Applications" className="h-12 w-12" />
+            <span className="font-display text-caption uppercase tracking-wide">Aegean Applications</span>
           </Link>
           
           {/* Desktop Navigation */}

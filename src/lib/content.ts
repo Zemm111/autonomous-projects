@@ -2,20 +2,20 @@
 
 export const siteContent = {
   meta: {
-    title: 'Agentic Applications - From Idea to Intelligent Software',
+    title: 'Aegean Applications (Agentic Applications) - From Idea to Intelligent Software',
     description: 'We turn ideas into intelligent software - applications that reason, analyze, and take action on behalf of users.',
   },
 
   home: {
     headline: 'From idea to agentic application.',
-    tagline: 'Agentic Applications helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.',
+    tagline: 'Aegean Applications helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.',
     intro: "Agentic software is the next phase of ingenuity. It's software that understands context, analyzes information, and does work on behalf of users. Whether you have a clear vision or a rough idea, we turn concepts into working applications.",
     ctaPrimary: { label: 'Start a conversation →', href: '/contact/' },
     ctaSecondary: { label: 'How we work →', href: '/services/' },
   },
 
   about: {
-    origin: "Agentic Applications is built on a simple belief: the software that will define the next phase of digital interactivity will be agentic. These are applications that understand goals, reason through problems and take action. We use state of the art orchestration frameworks, like OpenClaw, to coordinate swarms for development and for core product features. The result is software that ships fast and thinks deeply. We're building toward a future where agents are an implicit facet of product design, go-to-market methodology, user retention and business logic.",
+    origin: "Aegean Applications is built on a simple belief: the software that will define the next phase of digital interactivity will be agentic. These are applications that understand goals, reason through problems and take action. We use state of the art orchestration frameworks, like OpenClaw, to coordinate swarms for development and for core product features. The result is software that ships fast and thinks deeply. We're building toward a future where agents are an implicit facet of product design, go-to-market methodology, user retention and business logic.",
     philosophy: [
       'Intelligence is infrastructure - the next wave of applications will be built on reasoning, not just rules',
       'Software that coordinates multiple AI agents to solve complex problems - unlocking product possibilities that were not feasible before',

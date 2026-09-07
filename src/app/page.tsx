@@ -29,7 +29,7 @@ export default function Home() {
           
           <ScrollReveal delay={0.1}>
             <p className="text-body-lg text-grey-dark mb-8 max-w-2xl">
-              <span className="text-blue-brand">Agentic Applications</span> helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.
+              <span className="text-blue-brand">Aegean Applications</span> helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.
             </p>
           </ScrollReveal>
           

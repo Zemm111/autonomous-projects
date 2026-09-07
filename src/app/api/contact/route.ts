@@ -97,9 +97,9 @@ async function sendEmailNotification(data: {
     `;
 
     const response = await resend.emails.send({
-      from: 'Agentic Applications <contact@agentic-applications.dev>',
+      from: 'Aegean Applications <contact@agentic-applications.dev>',
       to: ['zemnaph@gmail.com'],
-      subject: `[Agentic Apps] New Contact: ${data.name}`,
+      subject: `[Aegean Apps] New Contact: ${data.name}`,
       html: htmlBody,
     });
 
