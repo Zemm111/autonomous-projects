@@ -89,6 +89,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {[
                 { href: '/about/', label: 'About' },
                 { href: '/services/', label: 'Services' },
+                { href: '/projects/', label: 'Projects' },
                 { href: '/contact/', label: 'Contact' },
               ].map((link, i) => (
                 <motion.div

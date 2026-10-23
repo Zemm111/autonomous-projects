@@ -43,6 +43,14 @@ export default function Header() {
               Services
             </Link>
             <Link 
+              href="/projects/" 
+              className={`hover:text-black transition-colors duration-150 ${
+                isActive('/projects/') ? 'text-black font-semibold' : 'text-grey-mid'
+              }`}
+            >
+              Projects
+            </Link>
+            <Link 
               href="/contact/" 
               className={`hover:text-black transition-colors duration-150 ${
                 isActive('/contact/') ? 'text-black font-semibold' : 'text-grey-mid'

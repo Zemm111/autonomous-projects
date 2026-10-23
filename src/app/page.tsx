@@ -77,6 +77,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Preview */}
+      <section className="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-white">
+        <div className="max-w-page mx-auto">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="font-display text-h2 mb-6">
+                Agentic applications in production
+              </h2>
+              <p className="text-body-lg text-grey-dark max-w-2xl mx-auto">
+                From multi-agent scoring systems to knowledge graph extraction - real projects using intelligent orchestration.
+              </p>
+            </div>
+          </ScrollReveal>
+          
+          <ScrollReveal delay={0.1}>
+            <div className="text-center">
+              <Button href="/projects/" variant="ghost" size="large">
+                View our work →
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <Divider />
 
       {/* CTA Section */}
