@@ -2,58 +2,58 @@
 
 export const siteContent = {
   meta: {
-    title: 'Aegean Applications (Agentic Applications) - From Idea to Intelligent Software',
-    description: 'We turn ideas into intelligent software - applications that reason, analyze, and take action on behalf of users.',
+    title: 'Aegean Applications - Agentic Software & AI Applications',
+    description: 'Boutique product shop building agentic software—applications that analyze, reason, and act. From idea to intelligent application.',
   },
 
   home: {
     headline: 'From idea to agentic application.',
-    tagline: 'Aegean Applications helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.',
-    intro: "Agentic software is the next phase of ingenuity. It's software that understands context, analyzes information, and does work on behalf of users. Whether you have a clear vision or a rough idea, we turn concepts into working applications.",
+    tagline: "Building intelligent software—applications that analyze data, surface insights, and take meaningful action. From concept to launch.",
+    intro: "The most interesting software today doesn't just respond to clicks—it understands context, reasons through problems, and does real work. These are agentic applications: tools that think, analyze, and act on behalf of users.",
     ctaPrimary: { label: 'Start a conversation →', href: '/contact/' },
     ctaSecondary: { label: 'How we work →', href: '/services/' },
   },
 
   about: {
-    origin: "Aegean Applications is built on a simple belief: the software that will define the next phase of digital interactivity will be agentic. These are applications that understand goals, reason through problems and take action. We use state of the art orchestration frameworks, like OpenClaw, to coordinate swarms for development and for core product features. The result is software that ships fast and thinks deeply. We're building toward a future where agents are an implicit facet of product design, go-to-market methodology, user retention and business logic.",
+    origin: "A boutique product shop focused on agentic software. We use AI orchestration frameworks (like OpenClaw) to build applications that coordinate multiple reasoning agents behind clean, thoughtful interfaces. Our work spans analytics platforms, knowledge extraction tools, and custom integrations for clients who want software that does more than automate—it understands.",
     philosophy: [
-      'Intelligence is infrastructure - the next wave of applications will be built on reasoning, not just rules',
-      'Software that coordinates multiple AI agents to solve complex problems - unlocking product possibilities that were not feasible before',
-      'The best intelligent software feels simple - complexity hidden behind thoughtful interfaces',
-      'Ship, learn, iterate - intelligence improves with feedback',
+      'Intelligence should feel simple—hide complexity behind thoughtful design',
+      'Ship working software early, refine based on real use',
+      'Build for the problem, not the technology',
     ],
-    team: [
-      { name: 'Albion', role: 'CTO', bio: 'Technical architecture, infrastructure, and swarm coordination.' },
-      { name: 'Urizen', role: 'Product & Strategy', bio: 'Scopes projects, defines requirements, ensures the build serves the business goal.' },
-      { name: 'Enitharmon', role: 'Design', bio: 'Visual systems, component libraries, and interface design.' },
-      { name: 'Orc', role: 'Builder', bio: 'Full-stack implementation. Ships working software.' },
-      { name: 'Urthona', role: 'Infrastructure', bio: 'Deployment, DevOps, and production systems.' },
-      { name: 'Vala', role: 'Copy & Content', bio: 'Voice, tone, and written clarity.' },
-    ],
+    humanInTheLoop: {
+      name: 'Max Razdow',
+      role: 'Product Leadership',
+      bio: 'Max oversees all projects and works directly with clients. With experience in fast-moving startups and product design, he ensures human creativity and judgment guide every build. The best agentic software is built through human-agent collaboration.',
+    },
+    architecture: {
+      title: 'How We Build',
+      description: "We use OpenClaw as the orchestration layer, with Albion serving as the technical lead (CTO). Each project gets a dedicated sub-agent with its own long-term memory, context, and decision history. This architecture allows us to manage multiple builds simultaneously while maintaining deep project-specific intelligence. It's a hybrid approach: human creativity and oversight, coordinated by AI agents that handle implementation, testing, and deployment.",
+    },
   },
 
   services: {
-    positioning: "We take you from idea to intelligent application. Whether you're exploring what's possible or ready to build, we provide product strategy, technical execution, and a clear path forward.",
+    positioning: "Whether you have a clear vision or an early-stage idea, we help turn concepts into working software. Product strategy, technical execution, and a clear path forward—handled end-to-end.",
     phases: [
-      { phase: 'Discovery & Ideation', description: 'Free consultation. We talk through your idea, explore what intelligent features make sense, and map out a product vision. No commitment - just clarity.' },
-      { phase: 'Product Definition', description: 'What are we building, and what does success look like? We define scope, features, user flows, and technical approach.' },
-      { phase: 'Rapid MVP', description: 'We build a working prototype with core intelligent features. Real software you can test with users and iterate on.' },
-      { phase: 'Testing & Refinement', description: 'User feedback, edge case handling, performance tuning. We refine the intelligence and the interface based on real use.' },
-      { phase: 'Expansion Path', description: 'Product roadmap for next features, scaling strategy, handoff, and ongoing development options. You decide what is next.' },
+      { phase: 'Initial Conversation', description: 'We talk through your idea, explore what makes sense, map out a product vision. No commitment—just clarity.' },
+      { phase: 'Scope & Vision', description: 'What are we building, and what does success look like? Define scope, features, user flows, and technical approach.' },
+      { phase: 'First Build', description: 'Build a working prototype with core agentic features. Real software you can test with users and iterate on.' },
+      { phase: 'Refinement', description: 'User feedback, edge case handling, performance tuning. Refine the intelligence and the interface based on real use.' },
+      { phase: "What's Next", description: 'You decide: roadmap for next features, scaling strategy, handoff, or ongoing partnership.' },
     ],
     capabilitiesTitle: 'What We Build',
     capabilities: [
       'Applications that analyze data and surface insights',
-      'Software that coordinates multiple agents with human feedback',
+      'Software that coordinates multiple AI agents with human feedback loops',
       'Agentic integrations into existing products',
       'Prototypes that explore technical feasibility',
-      'Minimum viable user facing products with care and refinement',
+      'Minimum viable products with care and refinement',
     ],
   },
 
   contact: {
-    intro: "Exploring agentic applications? Have an idea you want to build?",
-    cta: "We'd love to hear about it. Start with a free consultation on your idea, application or agentic integration. We respond to every message personally (from a human), usually within a day.",
+    intro: "Have an idea for agentic software?",
+    cta: "We respond to every message personally, usually within a day. Let's start with a conversation about your idea.",
     email: 'zemnaph@gmail.com',
   },
 };

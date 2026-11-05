@@ -83,10 +83,10 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="font-display text-h2 mb-6">
-                Agentic applications in production
+                Selected work
               </h2>
               <p className="text-body-lg text-grey-dark max-w-2xl mx-auto">
-                From multi-agent scoring systems to knowledge graph extraction - real projects using intelligent orchestration.
+                From multi-agent scoring systems to knowledge graph extraction—agentic applications in production.
               </p>
             </div>
           </ScrollReveal>
@@ -94,7 +94,7 @@ export default function Home() {
           <ScrollReveal delay={0.1}>
             <div className="text-center">
               <Button href="/projects/" variant="ghost" size="large">
-                View our work →
+                View projects →
               </Button>
             </div>
           </ScrollReveal>

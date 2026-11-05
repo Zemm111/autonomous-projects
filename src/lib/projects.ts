@@ -1,14 +1,14 @@
-// Projects portfolio content - case studies of agentic applications
+// Projects portfolio content - case studies of intelligent applications
 
 export const projectsContent = {
   meta: {
-    title: 'Projects - Agentic Applications in Production | Aegean Applications',
+    title: 'Projects - Max Razdow',
     description: 'Case studies of intelligent software: multi-agent systems, knowledge graphs, and AI-powered automation in production.',
   },
   
   intro: {
     headline: 'Selected Work',
-    tagline: 'Agentic applications in production - real projects using multi-agent orchestration, AI reasoning, and intelligent automation.',
+    tagline: 'Agentic applications in production—real projects using multi-agent orchestration, AI reasoning, and intelligent automation.',
   },
   
   projects: [

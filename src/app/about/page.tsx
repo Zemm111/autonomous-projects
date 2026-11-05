@@ -1,18 +1,6 @@
 import ScrollReveal from '@/components/ScrollReveal';
-import AgentCard from '@/components/AgentCard';
 import Divider from '@/components/Divider';
 import { siteContent } from '@/lib/content';
-
-// Agent shape assignments
-const agentShapes = {
-  'Human In The Loop': 'circle' as const,
-  'Albion': 'square' as const,
-  'Urizen': 'triangle' as const,
-  'Enitharmon': 'diamond' as const,
-  'Orc': 'cross' as const,
-  'Urthona': 'hexagon' as const,
-  'Vala': 'line' as const,
-};
 
 export default function About() {
   return (
@@ -28,7 +16,7 @@ export default function About() {
           <div className="max-w-content ml-auto">
             <ScrollReveal>
               <p className="text-body-lg text-grey-dark leading-relaxed">
-                Aegean Applications is built on a simple belief: the software that will define the next phase of <span className="text-blue-brand">digital interactivity will be agentic</span>. These are applications that understand goals, reason through problems and take action. We use state of the art orchestration frameworks, like OpenClaw, to coordinate swarms for development and for core product features. The result is software that ships fast and thinks deeply. We're building toward a future where agents are an implicit facet of product design, go-to-market methodology, user retention and business logic.
+                {siteContent.about.origin}
               </p>
             </ScrollReveal>
           </div>
@@ -60,38 +48,47 @@ export default function About() {
 
         <Divider />
 
-        {/* Team */}
-        <section className="mb-16">
+        {/* Human in the Loop */}
+        <section className="mb-24 md:mb-32">
           <ScrollReveal>
             <h2 className="font-display text-h2 uppercase tracking-tight mb-12">
-              The Team
+              Human in the Loop
             </h2>
           </ScrollReveal>
           
-          <div className="max-w-3xl">
-            {/* Human In The Loop - First entry */}
-            <ScrollReveal delay={0}>
-              <AgentCard
-                name="Human In The Loop"
-                role="Product Leadership"
-                description="Every Aegean Applications project has a human product manager. The Aegean Applications Lead will work directly with you and supervise all development. Our small team includes experience in fast moving startups and large organizations, with 30 cumulative years of experience in product management, application design, user experience, engineering and go-to-market tactics. We believe human-agent pairs are how quality apps get built."
-                shape="circle"
-                filled={false}
-              />
+          <div className="max-w-content">
+            <ScrollReveal delay={0.05}>
+              <div className="mb-4">
+                <h3 className="font-display text-h4 mb-2">
+                  {siteContent.about.humanInTheLoop.name}
+                </h3>
+                <p className="text-body-sm text-grey-mid uppercase tracking-wide mb-4">
+                  {siteContent.about.humanInTheLoop.role}
+                </p>
+                <p className="text-body text-grey-dark leading-relaxed">
+                  {siteContent.about.humanInTheLoop.bio}
+                </p>
+              </div>
             </ScrollReveal>
-            
-            {/* Agent Team */}
-            {siteContent.about.team.map((member, i) => (
-              <ScrollReveal key={member.name} delay={(i + 1) * 0.05}>
-                <AgentCard
-                  name={member.name}
-                  role={member.role}
-                  description={member.bio}
-                  shape={agentShapes[member.name as keyof typeof agentShapes]}
-                  filled={false}
-                />
-              </ScrollReveal>
-            ))}
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* Architecture */}
+        <section className="mb-16">
+          <ScrollReveal>
+            <h2 className="font-display text-h2 uppercase tracking-tight mb-12">
+              {siteContent.about.architecture.title}
+            </h2>
+          </ScrollReveal>
+          
+          <div className="max-w-content">
+            <ScrollReveal delay={0.05}>
+              <p className="text-body text-grey-dark leading-relaxed">
+                {siteContent.about.architecture.description}
+              </p>
+            </ScrollReveal>
           </div>
         </section>
       </div>
