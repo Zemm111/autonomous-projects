@@ -44,9 +44,9 @@ export default function ProjectShowcase() {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % projects.length);
         setIsTransitioning(false);
-      }, 1000); // 1 second for fade out
+      }, 1500); // 1.5 seconds for fade out
       
-    }, 5000); // 5 seconds total display time
+    }, 7500); // 7.5 seconds total display time
 
     return () => clearInterval(interval);
   }, []);
@@ -59,7 +59,7 @@ export default function ProjectShowcase() {
       className="block group"
     >
       <div 
-        className={`transition-opacity duration-1000 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
+        className={`transition-opacity duration-[1500ms] ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
       >
         {/* Screenshot */}
         <div className="relative aspect-video w-full mb-4 rounded-sm overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
