@@ -44,23 +44,23 @@ All agents write to a central PostgreSQL database. A VPS-based cron orchestrator
       
       screenshots: [
         { 
-          src: '/screenshots/participation-intelligence/hero.png',
+          src: '/screenshots/participation-intelligence/hero.jpg',
           alt: 'Participation Intelligence dashboard showing participant grid with engagement scores',
           caption: 'Main dashboard with multi-signal scoring',
           featured: true 
         },
         { 
-          src: '/screenshots/participation-intelligence/playground.png',
+          src: '/screenshots/participation-intelligence/playground.jpg',
           alt: 'Playground detail view showing cohort analysis',
           caption: 'Pre-built cohort ("Playground") with score breakdown' 
         },
         { 
-          src: '/screenshots/participation-intelligence/identity.png',
+          src: '/screenshots/participation-intelligence/identity.jpg',
           alt: 'AI-generated participant identity profile',
           caption: 'Weekly identity synthesis for high-value participants' 
         },
         { 
-          src: '/screenshots/participation-intelligence/data-viz.png',
+          src: '/screenshots/participation-intelligence/data-viz.jpg',
           alt: 'Score distribution charts and analytics',
           caption: 'Behavioral signal visualization' 
         },
