@@ -104,10 +104,15 @@ The same bicycle can be described multiple times, adding detail incrementally. A
       
       screenshots: [
         { 
+          src: '/screenshots/truenumbers-ai/overview.jpg',
+          alt: 'TrueNumbers product overview and navigation',
+          caption: 'Main interface showing knowledge graph structure',
+          featured: true 
+        },
+        { 
           src: '/screenshots/truenumbers-ai/hero.jpg',
           alt: 'TrueNumbersAI chat interface with extraction in progress',
-          caption: 'Natural language extraction with live agent feedback',
-          featured: true 
+          caption: 'Natural language extraction with live agent feedback'
         },
         { 
           src: '/screenshots/truenumbers-ai/review.jpg',
@@ -120,19 +125,9 @@ The same bicycle can be described multiple times, adding detail incrementally. A
           caption: 'Hierarchical tree view with property and connection badges' 
         },
         { 
-          src: '/screenshots/truenumbers-ai/overview.jpg',
-          alt: 'TrueNumbers product overview and navigation',
-          caption: 'Main interface showing knowledge graph structure' 
-        },
-        { 
           src: '/screenshots/truenumbers-ai/bulk.jpg',
           alt: 'Bulk text extraction with multi-pass progress indicators',
           caption: '3-pass pipeline with granular progress tracking' 
-        },
-        { 
-          src: '/screenshots/truenumbers-ai/prompt-chain.jpg',
-          alt: 'Multi-agent prompt chain and extraction workflow',
-          caption: '3-pass agent architecture with progressive refinement' 
         },
       ],
       
