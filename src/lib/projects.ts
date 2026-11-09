@@ -104,35 +104,35 @@ The same bicycle can be described multiple times, adding detail incrementally. A
       
       screenshots: [
         { 
-          src: '/screenshots/truenumbers-ai/hero.png',
+          src: '/screenshots/truenumbers-ai/hero.jpg',
           alt: 'TrueNumbersAI chat interface with extraction in progress',
           caption: 'Natural language extraction with live agent feedback',
           featured: true 
         },
         { 
-          src: '/screenshots/truenumbers-ai/review.png',
+          src: '/screenshots/truenumbers-ai/review.jpg',
           alt: 'Human-in-the-loop review workflow showing fact approval',
           caption: 'Review and approve extracted facts before saving' 
         },
         { 
-          src: '/screenshots/truenumbers-ai/tree-viz.png',
-          alt: 'Interactive knowledge graph visualization of bicycle assembly',
+          src: '/screenshots/truenumbers-ai/tree-viz.jpg',
+          alt: 'Interactive knowledge graph visualization',
           caption: 'Hierarchical tree view with property and connection badges' 
         },
         { 
-          src: '/screenshots/truenumbers-ai/connections.png',
-          alt: 'Connection detail modal showing bolt relationships',
-          caption: 'First-class connection subjects with participant tracking' 
+          src: '/screenshots/truenumbers-ai/overview.jpg',
+          alt: 'TrueNumbers product overview and navigation',
+          caption: 'Main interface showing knowledge graph structure' 
         },
         { 
-          src: '/screenshots/truenumbers-ai/bulk.png',
+          src: '/screenshots/truenumbers-ai/bulk.jpg',
           alt: 'Bulk text extraction with multi-pass progress indicators',
           caption: '3-pass pipeline with granular progress tracking' 
         },
         { 
-          src: '/screenshots/truenumbers-ai/intelligence.png',
-          alt: 'Intelligence tab showing domain knowledge and prompt customization',
-          caption: 'Customizable extraction prompts and domain knowledge injection' 
+          src: '/screenshots/truenumbers-ai/prompt-chain.jpg',
+          alt: 'Multi-agent prompt chain and extraction workflow',
+          caption: '3-pass agent architecture with progressive refinement' 
         },
       ],
       
