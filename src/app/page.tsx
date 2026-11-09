@@ -3,6 +3,7 @@ import Button from '@/components/Button';
 import Divider from '@/components/Divider';
 import DitheredShape from '@/components/shaders/DitheredShape';
 import GridOverlay from '@/components/GridOverlay';
+import ProjectShowcase from '@/components/ProjectShowcase';
 import { siteContent } from '@/lib/content';
 
 export default function Home() {
@@ -21,28 +22,40 @@ export default function Home() {
         <GridOverlay opacity={0.05} />
         
         <div className="relative z-10 px-6 md:px-12 lg:px-16 py-32 max-w-page mx-auto w-full">
-          <ScrollReveal>
-            <h1 className="font-display text-display mb-8 max-w-4xl">
-              From idea to <span className="text-blue-brand">agentic application</span>.
-            </h1>
-          </ScrollReveal>
-          
-          <ScrollReveal delay={0.1}>
-            <p className="text-body-lg text-grey-dark mb-8 max-w-2xl">
-              <span className="text-blue-brand">Aegean Applications</span> helps you build intelligent software - applications that can reason, analyze, and take action. We handle everything from product definition to launch.
-            </p>
-          </ScrollReveal>
-          
-          <ScrollReveal delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4 mt-12">
-              <Button href={siteContent.home.ctaPrimary.href} variant="primary" size="large">
-                {siteContent.home.ctaPrimary.label}
-              </Button>
-              <Button href={siteContent.home.ctaSecondary.href} variant="ghost" size="large">
-                {siteContent.home.ctaSecondary.label}
-              </Button>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left: Headline & CTAs */}
+            <div>
+              <ScrollReveal>
+                <h1 className="font-display text-display mb-8">
+                  From idea to <span className="text-blue-brand">agentic application</span>.
+                </h1>
+              </ScrollReveal>
+              
+              <ScrollReveal delay={0.1}>
+                <p className="text-body-lg text-grey-dark mb-8">
+                  {siteContent.home.tagline}
+                </p>
+              </ScrollReveal>
+              
+              <ScrollReveal delay={0.2}>
+                <div className="flex flex-col sm:flex-row gap-4 mt-12">
+                  <Button href={siteContent.home.ctaPrimary.href} variant="primary" size="large">
+                    {siteContent.home.ctaPrimary.label}
+                  </Button>
+                  <Button href={siteContent.home.ctaSecondary.href} variant="ghost" size="large">
+                    {siteContent.home.ctaSecondary.label}
+                  </Button>
+                </div>
+              </ScrollReveal>
             </div>
-          </ScrollReveal>
+
+            {/* Right: Rotating Project Showcase */}
+            <ScrollReveal delay={0.3}>
+              <div className="lg:pl-8">
+                <ProjectShowcase />
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
